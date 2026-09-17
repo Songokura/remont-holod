@@ -322,12 +322,13 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
 .stub-t{font:700 14px/1 var(--fd);letter-spacing:.24em;text-transform:uppercase;color:var(--cop2)}
 .stub-s{font-size:13px;color:var(--mute)}
 .mph.has-img .stub{display:none}
-.mph-2{position:absolute!important;inset:auto -6% -8% auto!important;width:46%!important;height:auto!important;aspect-ratio:3/4;border-radius:14px;border:1px solid var(--line2);box-shadow:0 20px 40px -20px rgba(0,0,0,.9);transform:rotate(-4deg)}
+.mph-1{object-position:30% 30%}
+.mph-2{position:absolute!important;inset:auto 5% 5% auto!important;width:36%!important;height:auto!important;aspect-ratio:3/4;border-radius:14px;border:2px solid rgba(255,255,255,.85);box-shadow:0 24px 44px -16px rgba(0,0,0,.95);transform:rotate(-4deg)}
 .mtxt{text-align:center;display:flex;flex-direction:column;align-items:center}
 .ticks{margin-top:22px;display:grid;gap:10px;text-align:left;max-width:560px}
 .ticks li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);font-weight:600;font-size:15px}
 .ticks svg{color:var(--cop2);margin-top:2px}
-@media(max-width:860px){.mgrid{grid-template-columns:1fr}.mph{aspect-ratio:4/3;max-height:380px}.mph .stub{padding-top:18%;padding-right:26%}.mph-2{width:34%!important;inset:auto -3% -6% auto!important}}
+@media(max-width:860px){.mgrid{grid-template-columns:1fr}.mph{aspect-ratio:4/3;max-height:380px}.mph .stub{padding-top:18%;padding-right:26%}.mph-2{width:24%!important;inset:auto 4% 6% auto!important}}
 
 /* отзывы */
 .sec-rev{background:var(--ink)}
