@@ -484,3 +484,5 @@ blockquote.rev .stars{font:400 17px/1 Arial,sans-serif;letter-spacing:.14em;colo
 .pw[id]{scroll-margin-top:0}
 .sec[id],.head[id],.chip[id]{scroll-margin-top:calc(var(--hh) + 8px)}
 @media(max-width:400px){html[lang="kk"] #brendy h2{font-size:34px}}
+/* мобайл: «Склад» и «3 года» (длинные подписи) на всю ширину, ряды ровные 2 / 1 / 1 / 2 */
+@media(max-width:760px){.tiles .tile:nth-child(3),.tiles .tile:nth-child(4){grid-column:1/-1}.tiles .tile:nth-child(3) span,.tiles .tile:nth-child(4) span{max-width:300px}}
