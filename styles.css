@@ -277,6 +277,9 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
 .sym-ans{text-align:center;display:flex;flex-direction:column;align-items:center}
 .sym-ans h3{font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:clamp(28px,3.2vw,42px);line-height:1;margin-top:12px;letter-spacing:.01em}
 .sa-d{color:rgba(238,243,248,.88);margin-top:12px;font-weight:500}
+.sa-list{margin-top:14px;display:grid;gap:7px;text-align:left;max-width:520px;width:100%}
+.sa-list li{position:relative;padding-left:20px;font-size:15.5px;font-weight:500;line-height:1.4;color:rgba(238,243,248,.9)}
+.sa-list li::before{content:"";position:absolute;left:3px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--cop2)}
 .sa-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-size:15px;color:var(--txt)}
 .sa-meta span{display:inline-flex;align-items:center;gap:7px}
 .sa-meta svg{color:var(--cop2);flex:0 0 auto}
@@ -290,10 +293,10 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
 .sa-pr li b.dim{font:600 14px/1.2 var(--ft);color:var(--mute);text-transform:none;letter-spacing:0}
 .sa-parts{margin-top:10px;font-size:13.5px;color:var(--mute);font-weight:600}
 @media(max-width:760px){
-  .sym-panel{grid-template-columns:1fr;gap:10px;padding:18px 16px 20px;border-radius:18px}
+  .sym-panel{grid-template-columns:minmax(0,1fr);gap:10px;padding:18px 16px 20px;border-radius:18px}
   .xray{padding:0}
   .fridge{width:150px}
-  .xray-lbl{position:static;transform:none;margin-top:6px}
+  .xray-lbl{position:static;transform:none;margin-top:6px;white-space:normal;text-align:center;line-height:1.5;max-width:100%}
   .chips{gap:6px}
   .chip{height:42px;padding:0 14px;font-size:14px}
   .sym-ans h3{font-size:28px}
