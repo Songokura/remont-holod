@@ -181,6 +181,17 @@ html[lang="kk"] .h1 .big{font-size:clamp(34px,min(7.5vw,5.6svh),64px);line-heigh
 .hero .cta .btn{min-width:220px}
 @media(max-width:480px){.hero .cta .btn{min-width:0}}
 .hero .iglink{color:rgba(238,243,248,.9)}
+/* плашка звонка в герое */
+.hero-call{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:6px 22px 6px 6px;border-radius:999px;background:rgba(217,138,72,.16);border:1.5px solid rgba(240,166,96,.55);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .3s,border-color .3s,transform .35s cubic-bezier(.2,.7,.2,1)}
+.hero-call:hover{background:rgba(217,138,72,.28);border-color:var(--cop2);transform:translateY(-2px)}
+.hc-ic{width:42px;height:42px;border-radius:50%;background:var(--cop);display:grid;place-items:center;flex:0 0 auto;box-shadow:0 0 0 0 rgba(240,166,96,.55);animation:ring 2.4s ease-out infinite}
+.hc-ic svg{display:block}
+.hc-t{display:flex;flex-direction:column;align-items:flex-start;gap:4px;line-height:1}
+.hc-t small{font:800 11px/1 var(--ft);letter-spacing:.1em;text-transform:uppercase;color:var(--lamp)}
+.hc-t b{font:700 22px/1 var(--fd);letter-spacing:.03em;white-space:nowrap}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(240,166,96,.55)}70%,100%{box-shadow:0 0 0 12px rgba(240,166,96,0)}}
+@media(prefers-reduced-motion:reduce){.hc-ic{animation:none}}
+@media(max-width:480px){.hero-call{width:100%;max-width:340px;justify-content:center;margin-top:10px}}
 .ticker-w{position:absolute;left:0;right:0;bottom:0;z-index:3;border-top:1px solid rgba(255,255,255,.1);background:rgba(6,9,13,.35);padding:13px 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .ticker{display:flex;width:max-content;animation:mq var(--tkd,40s) linear infinite}
 .ticker b,.mq-t b{flex:0 0 auto;font:700 13px/1 var(--fd);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,243,248,.8);padding:0 22px;position:relative;white-space:nowrap}
@@ -189,7 +200,7 @@ html[lang="kk"] .h1 .big{font-size:clamp(34px,min(7.5vw,5.6svh),64px);line-heigh
 /* интро: текст поднимается */
 .hero-in > *{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .hero.on .hero-in > *{opacity:1;transform:none}
-.hero-in > :nth-child(2){transition-delay:.08s}.hero-in > :nth-child(3){transition-delay:.16s}.hero-in > :nth-child(4){transition-delay:.26s}.hero-in > :nth-child(5){transition-delay:.36s}.hero-in > :nth-child(6){transition-delay:.44s}
+.hero-in > :nth-child(2){transition-delay:.08s}.hero-in > :nth-child(3){transition-delay:.16s}.hero-in > :nth-child(4){transition-delay:.26s}.hero-in > :nth-child(5){transition-delay:.36s}.hero-in > :nth-child(6){transition-delay:.44s}.hero-in > :nth-child(7){transition-delay:.52s}
 html.no-intro .hero-in > *,html.no-plate .hero-in > *{opacity:1;transform:none;transition:none}
 html.no-plate .hero-in{transform:none}
 @media(max-width:760px){
@@ -207,6 +218,7 @@ html.no-plate .hero-in{transform:none}
   .h1{margin-top:12px}
   .handle{top:26%;height:48%;right:10px;width:10px}
 }
+@media(max-height:700px) and (max-width:760px){.lcd{margin-bottom:8px}.lcd-d{height:20px}.h1{margin-top:8px}.hero .lead{margin-top:12px;font-size:15px}.hero .cta{margin-top:18px}.hero-call{margin-top:8px}.hero .iglink{margin-top:12px}}
 @media(max-height:700px) and (min-width:761px){.hero-in{transform:translateY(calc(-14px - 30px * var(--stay)))}.hero .lead{margin-top:10px}.lcd{margin-bottom:12px}}
 
 /* ---------- фото-плиты услуг ---------- */
@@ -242,6 +254,15 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
   .dtag{top:12px;left:12px;font-size:10px}
 }
 @media(max-width:900px) and (max-height:760px){.ph{max-height:clamp(160px,34svh,260px)}.pp .lead{display:none}}
+/* плита с длинным текстом (Miele): на узком экране растёт по содержимому, фото фиксированной высоты */
+.lead2{margin-top:10px}
+@media(max-width:900px){
+  .pw-long{height:auto}
+  .pw-long .plate{height:auto;min-height:100svh}
+  .pw-long .pp-in{height:auto;grid-template-rows:auto auto}
+  .pw-long .ph{height:clamp(240px,70vw,380px);max-height:none}
+  .pw-long .pp .lead{display:block}
+}
 /* на телефоне низ плиты закрывает липкая панель - фото кончается над ней */
 @media(max-width:760px){.pp-in{padding-bottom:calc(80px + env(safe-area-inset-bottom))}}
 
@@ -324,6 +345,14 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
 .ticks li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);font-weight:600;font-size:16.5px}
 .ticks svg{color:var(--cop2);margin-top:2px}
 @media(max-width:860px){.mgrid{grid-template-columns:1fr}.mph{aspect-ratio:4/3;max-height:380px}.mph .stub{padding-top:18%;padding-right:26%}.mph-2{width:24%!important;inset:auto 4% 6% auto!important}}
+
+/* работы */
+.sec-works{background:var(--ink)}
+.work{flex:0 0 min(62vw,290px);aspect-ratio:3/4;scroll-snap-align:start;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--panel);position:relative}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.work:hover img{transform:scale(1.04)}
+.sec-works .cta{margin-top:26px}
+.sec-works .ignick{text-align:center}
 
 /* отзывы */
 .sec-rev{background:var(--ink)}
