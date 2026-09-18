@@ -291,7 +291,7 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
 .sa-pr li i{flex:1 1 auto;min-width:14px;border-bottom:1px dotted var(--line2);transform:translateY(-5px)}
 .sa-pr li b{flex:0 0 auto;font:700 21px/1 var(--fd);color:var(--cop2);white-space:nowrap;text-transform:uppercase;letter-spacing:.01em}
 .sa-pr li b.dim{font:600 14px/1.2 var(--ft);color:var(--mute);text-transform:none;letter-spacing:0}
-.sa-parts{margin-top:10px;font-size:13.5px;color:var(--mute);font-weight:600}
+.sa-parts{margin-top:12px;max-width:520px;font-size:14px;line-height:1.45;color:var(--mute);font-weight:600}
 @media(max-width:760px){
   .sym-panel{grid-template-columns:minmax(0,1fr);gap:10px;padding:18px 16px 20px;border-radius:18px}
   .xray{padding:0}
