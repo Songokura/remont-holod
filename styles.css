@@ -177,6 +177,11 @@ html.no-plate .door{display:none}
 html[lang="kk"] .h1 span:first-child{font-size:clamp(58px,min(17vw,11.5svh),164px);line-height:.9;letter-spacing:.01em;color:#fff;text-shadow:0 10px 40px rgba(0,0,0,.45)}
 html[lang="kk"] .h1 .big{font-size:clamp(34px,min(7.5vw,5.6svh),64px);line-height:1;letter-spacing:.06em;color:rgba(233,239,245,.9);text-shadow:none;margin-top:6px}
 .hero .lead{max-width:none;margin-top:18px;color:rgba(238,243,248,.95);font-weight:600;font-size:clamp(16px,1.35vw,20px);text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero .lead.hero-bl{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 20px;max-width:760px;margin-inline:auto}
+.hero-bl .hl-i{white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.hero-bl .hl-i::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cop2);box-shadow:0 0 8px rgba(240,166,96,.7);flex:0 0 auto}
+.hero-bl .sep{display:none}
+@media(max-width:480px){.hero .lead.hero-bl{gap:4px 14px}}
 .hero .cta{margin-top:26px}
 .hero .cta .btn{min-width:220px}
 @media(max-width:480px){.hero .cta .btn{min-width:0}}
