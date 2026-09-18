@@ -307,6 +307,9 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
 .sym-ans h3{font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:clamp(28px,3.2vw,42px);line-height:1;margin-top:12px;letter-spacing:.01em}
 .sa-d{color:rgba(238,243,248,.88);margin-top:12px;font-weight:500}
 .sa-d p + p{margin-top:8px}
+.sa-d.sa-d-lg{font-size:17px;line-height:1.55;max-width:560px}
+.sa-d.sa-d-lg p + p{margin-top:12px}
+@media(max-width:760px){.sa-d.sa-d-lg{font-size:16px}}
 .sa-d b{color:#fff;font-weight:800}
 .sa-list{margin-top:14px;display:grid;gap:7px;text-align:left;max-width:520px;width:100%}
 .sa-list li{position:relative;padding-left:20px;font-size:15.5px;font-weight:500;line-height:1.4;color:rgba(238,243,248,.9)}
