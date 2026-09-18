@@ -394,7 +394,8 @@ blockquote.rev footer b{font:700 18px/1 var(--fd);text-transform:uppercase;lette
 blockquote.rev footer span{font-size:14px;color:var(--mute);font-weight:600}
 blockquote.rev .stars{font:400 17px/1 Arial,sans-serif;letter-spacing:.14em;color:var(--cop2)}
 .rev-cta{margin-top:clamp(26px,4vw,40px);text-align:center}
-.rev-note{font-size:16px;color:var(--mute);font-weight:600}
+.rev-note{font-size:16px;line-height:1.55;color:var(--mute);font-weight:600;max-width:560px;margin-inline:auto}
+.rev-note b{display:block;margin-bottom:4px;font:700 22px/1.2 var(--fd);letter-spacing:.01em;color:#fff}
 .rev-cta .cta{margin-top:16px}
 @media(max-width:600px){.head-row{flex-direction:column;align-items:center;text-align:center}.head-row .kick{justify-content:center}}
 
