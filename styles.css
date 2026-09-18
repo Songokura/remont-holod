@@ -253,7 +253,7 @@ html.no-plate .plate .txt > *{opacity:1;transform:none;transition:none}
   .ph .handle{top:22%;height:56%;width:10px}
   .dtag{top:12px;left:12px;font-size:10px}
 }
-@media(max-width:900px) and (max-height:760px){.ph{max-height:clamp(160px,34svh,260px)}.pp .lead{display:none}}
+@media(max-width:900px) and (max-height:760px){.ph{max-height:clamp(160px,34svh,260px)}}
 /* плита с длинным текстом (Miele): на узком экране растёт по содержимому, фото фиксированной высоты */
 .lead2{margin-top:10px}
 @media(max-width:900px){

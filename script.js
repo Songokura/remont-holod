@@ -149,6 +149,7 @@ document.querySelectorAll(".lang button").forEach(function(b){
 
 /* дисплейные строки: казахский длиннее - ужимаем, пока не влезет */
 function fitText(){
+  fitPlates();
   document.querySelectorAll(".h1 span, .kphone").forEach(function(el){
     el.style.fontSize = "";
     var box = el.parentElement.clientWidth;
@@ -158,6 +159,20 @@ function fitText(){
       size *= 0.95;
       el.style.fontSize = size + "px";
     }
+  });
+}
+
+/* фото-плиты на узком и низком экране: если текст + фото не влезают в экран,
+   плита растёт по содержимому (.pw-long), иначе остаётся полноэкранной и липкой.
+   Считается после смены языка, шрифтов и размера окна (вызов вместе с fitText). */
+function fitPlates(){
+  var W = innerWidth, H = innerHeight;
+  var hh = parseFloat(getComputedStyle(root).getPropertyValue("--hh")) || 64;
+  document.querySelectorAll(".pw").forEach(function(pw){
+    var txt = pw.querySelector(".plate.pp .txt"); if (!txt) return;
+    if (W > 900) { pw.classList.remove("pw-long"); return; }
+    var need = hh + 8 + txt.offsetHeight + 16 + 200 + (W <= 760 ? 80 : 24);
+    pw.classList.toggle("pw-long", need > H);
   });
 }
 
