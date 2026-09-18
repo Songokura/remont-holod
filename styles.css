@@ -483,3 +483,4 @@ blockquote.rev .stars{font:400 17px/1 Arial,sans-serif;letter-spacing:.14em;colo
 /* якоря */
 .pw[id]{scroll-margin-top:0}
 .sec[id],.head[id],.chip[id]{scroll-margin-top:calc(var(--hh) + 8px)}
+@media(max-width:400px){html[lang="kk"] #brendy h2{font-size:34px}}
